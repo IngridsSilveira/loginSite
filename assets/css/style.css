@@ -213,6 +213,12 @@
     .input {
         width: 300px;
     }
+    .modalContainer {
+        width: 100vw;
+    }
+    .modal {
+        width: 40%;
+    }
 }
 
 @media screen and (min-width: 992px) {
@@ -236,4 +242,10 @@
         color: gold;
         font-size: 1.5rem;
       }
+      .modalContainer {
+        width: 100vw;
+    }
+    .modal {
+        width: 30%;
+    }
 }
