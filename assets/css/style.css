@@ -99,6 +99,64 @@
     margin-bottom: 10px;
     font-family: 'Edu VIC WA NT Beginner', cursive;
 }
+/* MODAL */
+.modalContainer {
+    position: fixed;
+    top: 30px;
+    z-index: 999;
+    justify-content: center;
+    display: none;
+}
+.modal {
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    background: white;
+    border-radius: 10px;
+    width: 50%;
+}
+.active {
+    display: flex;
+    flex-direction: column;
+}
+.active .modal {
+    animation: modal .4s;
+    flex-direction: column;
+}
+
+.texto_modal {
+    margin: 10px auto;
+}
+.btns {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+.btns button {
+    font-size: medium;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+}
+.btnOk {
+    background: #65864d !important;
+}
+.btnClose {
+    background: #c71818 !important;
+}
+
+@keyframes modal {
+    from {
+        opacity: 0;
+        transform: translate3d(0, -60px, 0);
+    }
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
 /* RODAPE */
 .rodape {
     display:flex;
@@ -131,6 +189,17 @@
     .rodape-texto,
     .rodape-texto a:hover {
         font-size: .9rem;
+    }
+     .modal {
+        padding: 10px;
+        width: 80%;
+    }
+    span,
+    .btns button {
+        font-size: smaller;
+    }
+    .modalContainer {
+        width: auto;
     }
 }
 

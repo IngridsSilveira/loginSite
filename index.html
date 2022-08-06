@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
     <link rel="stylesheet" href="assets/css/style.css">
+    <title>Login</title>
 </head>
 <body>
     <main class="corpo">
@@ -17,15 +17,26 @@
                         <div class="card">
                             <img src="assets/images/05-12.png" class="image">
 
-                            <form class="form" action="#">
+                            <form class="form">
                                 <label class="label" for="username">E-mail</label>
-                                <input class="input" name="username" type="text" placeholder="Digite seu e-mail">
+
+                                <input id="email" class="input" name="username" type="text" placeholder="seu@email.com" >
 
                                 <label class="label" for="password">Senha</label>
-                                <input class="input" name="password" placeholder="Digite sua senha" type="password">
+                                
+                                <input id="senha" class="input" name="password" placeholder="Digite sua senha" type="password" >
 
-                                <button class="btn">Login</button>
+                                <input type="submit" class="btn" value="Login">
                             </form>
+                        </div>
+                        <div class="modalContainer">
+                            <div class="modal">
+                                <p class="texto_modal">E-mail e Senha fornecidos estão incorretos!!</p>
+                                <div class="btns">
+                                    <button class="btnOk" onclick="closeModal()">Ok</button>
+                                    <button class="btnClose" onclick="closeModal()">Close</button>
+                                </div>
+                            </div>
                         </div>
                     </section>
                 </div>
@@ -34,5 +45,6 @@
                 </footer>
             </div>
     </main>
+    <script src="assets/js/main.js"></script>
 </body>
 </html>
